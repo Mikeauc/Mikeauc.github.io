@@ -1,0 +1,51 @@
+
+<html xmlns="http://www.novatos.com" xml:lang="nl">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<title>:: PRACTICA  DESAFIO DE ATAQUE WEB ::</title>
+<link href="css/challenge.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top">
+	<img src="images/logo.png" alt="" />
+</div>
+<div id="challenge">
+<h1>Intento de Ataque WEB FACIL</h1>
+<p>
+¡Encuentre la contraseña correcta y úsela en la página¡
+</p>
+
+
+<script type="text/javascript">
+var numletter="6789012345uvwxyzABCghijklmQRSTUVWXnopqrDEFGHIJKabcdefstLMNOPYZ";
+
+function submitentry(){
+	verification = document.getElementById("passwd").value;
+	
+	
+	alert("Searching...");
+	
+	password = numletter.substring(11,12);
+	password = password + numletter.substring(18,19);
+	password = password + numletter.substring(23,24);
+	password = password + numletter.substring(16,17);
+	password = password + numletter.substring(24,25);
+	password = password + numletter.substring(8,9);
+	
+	if(verification == password){
+		alert("Bien hecho NOVATOS");
+	} else {
+		alert("LO SIENTO, NO LO HAS LOGRADO!");
+	}
+}
+</script>
+
+<form action="index.php" method="post">
+<input type="password" name="passwd" id="passwd" size="16" />
+<input type="submit" name="submit" value="Enter" onclick="submitentry(); return false;" />
+</form>
+</div>
+</body>
+
+
+</html>
